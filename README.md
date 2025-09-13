@@ -4,7 +4,7 @@ Para executar a aplicação abra o terminal e execute a sequencia de comandos ab
 
 Clonar repositório:
 ```
-git clone https://github.com/phlbarreto/Calculadora-IMC-.py.git
+git clone https://github.com/phlbarreto/Calculadora-IMC-python.git
 ```
 
 Após concluir, navegue até a pasta do projeto:
