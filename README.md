@@ -9,7 +9,7 @@ git clone https://github.com/phlbarreto/Calculadora-IMC-python.git
 
 Após concluir, navegue até a pasta do projeto:
 ```
-cd "Calculadora IMC - python"
+cd Calculadora-IMC-python
 ```
 
  E por fim instalar dependencias:
