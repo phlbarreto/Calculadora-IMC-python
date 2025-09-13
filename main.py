@@ -154,7 +154,7 @@ lbl_nome = Label(frame_sup, text='Nome:', bg=corfundo, font=fontepad)
 lbl_nome.place(x=120, y=40)
 
 lbl_ex_peso = Label(frame_sup, text='ex: 70.5', bg=corfundo, font=('Arial', 10))
-lbl_ex_peso.place(x=380, y=84)
+lbl_ex_peso.place(x=350, y=84)
 
 ent_nome = ttk.Entry(frame_sup, width=20)
 ent_nome.place(x=200, y=44)
@@ -167,7 +167,7 @@ ent_altura = ttk.Entry(frame_sup, width=20)
 ent_altura.place(x=200, y=124)
 
 lbl_ex_altura = Label(frame_sup, text='ex: 1.65', bg=corfundo, font=('Arial', 10))
-lbl_ex_altura.place(x=380, y=124)
+lbl_ex_altura.place(x=350, y=124)
 
 btn_calc = ttk.Button(frame_sup, text='Calcular', command=calcular, width=8)
 btn_calc.place(x=320, y=170)
