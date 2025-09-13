@@ -144,12 +144,6 @@ frame_sup.pack()
 frame_inf = Frame(root, bg=corfundo, width=500, height=240, relief='raised', highlightthickness=1)
 frame_inf.pack()
 
-lbl_peso = Label(frame_sup, text='Peso:', bg=corfundo, font=fontepad)
-lbl_peso.place(x=120, y=80)
-
-ent_peso = ttk.Entry(frame_sup, width=20)
-ent_peso.place(x=200, y=84)
-
 lbl_nome = Label(frame_sup, text='Nome:', bg=corfundo, font=fontepad)
 lbl_nome.place(x=120, y=40)
 
@@ -159,6 +153,12 @@ lbl_ex_peso.place(x=350, y=84)
 ent_nome = ttk.Entry(frame_sup, width=20)
 ent_nome.place(x=200, y=44)
 ent_nome.focus()
+
+lbl_peso = Label(frame_sup, text='Peso:', bg=corfundo, font=fontepad)
+lbl_peso.place(x=120, y=80)
+
+ent_peso = ttk.Entry(frame_sup, width=20)
+ent_peso.place(x=200, y=84)
 
 lbl_altura = Label(frame_sup, text='Altura:', bg=corfundo, font=fontepad)
 lbl_altura.place(x=120, y=120)
