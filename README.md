@@ -1,6 +1,6 @@
 # Calculadora IMC em Python
 
-Para executar a aplicação abre o terminal e execute a sequencia de comandos abaixo:
+Para executar a aplicação abra o terminal e execute a sequencia de comandos abaixo:
 
 Clonar repositório:
 ```
