@@ -33,11 +33,11 @@ def calcular():
         elif 25 <= imc <= 29.99:
             tabela.set(f'Você está levemente acima do peso e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg.')
         elif 30 <= imc <= 34.99:
-            tabela.set(f'Você está com obsidade grau I e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg.')
+            tabela.set(f'Você está com obesidade grau I e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg.')
         elif 35 <= imc <= 39.99:
-            tabela.set(f'Você está com obsidade grau II e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg. \n')
+            tabela.set(f'Você está com obesidade grau II e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg. \n')
         else:
-            tabela.set(f'Você está com obsidade grau III e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg.')
+            tabela.set(f'Você está com obesidade grau III e \ndeveria emagrecer no minimo {pesoc - pmax:.1f} kg.')
         ideal.set(f'Seu peso ideal pode variar \nentre {pmin:.1f} kg e {pmax:.1f} kg.')
 
 
@@ -117,16 +117,15 @@ def sair():
 # GUI
 root = Tk()
 root.title('Calculadora IMC - by[Pedro Barreto]')
-root.geometry('350x350+430+100')
+root.geometry('550x440+300+100')
 root.resizable(0, 0)
 root.iconbitmap(default='_img/cal.ico')
-resultado = StringVar()
+resultado = StringVar(value="O resultado aparecerá aqui!")
 tabela = StringVar()
 ideal = StringVar()
 corfundo = '#80aaff'
 fontepad = ('Century Gothic'), 12, 'bold'
 tabelaimc = PhotoImage(file='_img/tabela.png')
-btncalc = PhotoImage('_img/calc.png')
 # ---------------------------------------------------
 # Menu
 abas = Menu(root)
@@ -140,36 +139,41 @@ abas.add_command(label='Sair', command=sair)
 
 # ---------------------------------------------------
 # widgets
-frame_sup = Frame(root, bg=corfundo, width=350, height=150, relief='raised')
+frame_sup = Frame(root, bg=corfundo, width=500, height=200, relief='raised')
 frame_sup.pack()
-frame_inf = Frame(root, bg=corfundo, width=350, height=200, relief='raised', highlightthickness=1)
+frame_inf = Frame(root, bg=corfundo, width=500, height=240, relief='raised', highlightthickness=1)
 frame_inf.pack()
 
-lbl_nome = Label(frame_sup, text='Nome:', bg=corfundo, font=fontepad)
-lbl_nome.place(x=40, y=40)
-
 lbl_peso = Label(frame_sup, text='Peso:', bg=corfundo, font=fontepad)
-lbl_peso.place(x=40, y=65)
+lbl_peso.place(x=120, y=80)
 
-lbl_altura = Label(frame_sup, text='Altura:', bg=corfundo, font=fontepad)
-lbl_altura.place(x=40, y=90)
+ent_peso = ttk.Entry(frame_sup, width=20)
+ent_peso.place(x=200, y=84)
 
+lbl_nome = Label(frame_sup, text='Nome:', bg=corfundo, font=fontepad)
+lbl_nome.place(x=120, y=40)
 
-ent_nome = ttk.Entry(frame_sup, width=15)
-ent_nome.place(x=130, y=44)
+lbl_ex_peso = Label(frame_sup, text='ex: 70.5', bg=corfundo, font=('Arial', 10))
+lbl_ex_peso.place(x=380, y=84)
+
+ent_nome = ttk.Entry(frame_sup, width=20)
+ent_nome.place(x=200, y=44)
 ent_nome.focus()
 
-ent_peso = ttk.Entry(frame_sup, width=10)
-ent_peso.place(x=130, y=68)
+lbl_altura = Label(frame_sup, text='Altura:', bg=corfundo, font=fontepad)
+lbl_altura.place(x=120, y=120)
 
-ent_altura = ttk.Entry(frame_sup, width=10)
-ent_altura.place(x=130, y=94)
+ent_altura = ttk.Entry(frame_sup, width=20)
+ent_altura.place(x=200, y=124)
+
+lbl_ex_altura = Label(frame_sup, text='ex: 1.65', bg=corfundo, font=('Arial', 10))
+lbl_ex_altura.place(x=380, y=124)
 
 btn_calc = ttk.Button(frame_sup, text='Calcular', command=calcular, width=8)
-btn_calc.place(x=170, y=125)
+btn_calc.place(x=320, y=170)
 
 btn_limpa = ttk.Button(frame_sup, text='Limpar', command=limpar, width=8, cursor='exchange')
-btn_limpa.place(x=90, y=125)
+btn_limpa.place(x=200, y=170)
 
 lbl_res = Label(frame_inf, textvariable=resultado, bg=corfundo, font=fontepad, justify=LEFT)
 lbl_res.place(x=20, y=20)
